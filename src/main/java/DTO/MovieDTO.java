@@ -9,7 +9,7 @@ public class MovieDTO {
     private String title;
     private int releaseYear;
     private String genre;
-    private DirectorDTO directorDTO;
+    private String directorString;
 
     public MovieDTO(Movie movie) {
 
@@ -17,7 +17,7 @@ public class MovieDTO {
         this.title = movie.getTitle();
         this.releaseYear = movie.getReleaseYear();
         this.genre = movie.getGenre();
-        this.directorDTO = new DirectorDTO(movie.getDirector());
+        this.directorString = movie.getDirector().getFname() + " " + movie.getDirector().getLname();
     }
 
     public long getId() {
@@ -52,11 +52,11 @@ public class MovieDTO {
         this.genre = genre;
     }
 
-    public DirectorDTO getDirectorDTO() {
-        return directorDTO;
+    public String getDirectorString() {
+        return directorString;
     }
 
-    public void setDirectorDTO(DirectorDTO directorDTO) {
-        this.directorDTO = directorDTO;
+    public void setDirectorString(String directorString) {
+        this.directorString = directorString;
     }
 }
