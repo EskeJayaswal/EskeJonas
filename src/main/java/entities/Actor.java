@@ -3,8 +3,10 @@ package entities;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.Table;
 
 @Entity
+@Table(name = "actor")
 public class Actor {
     @Id
     @Column(name = "id", nullable = false)
